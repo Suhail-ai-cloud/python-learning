@@ -1,0 +1,7 @@
+I am learning Python.
+I am learning File Handling.
+I want to become an AI Engineer.
+I am learning Python.
+I am learning File Handling.
+I want to become an AI Engineer.
+I am also learning AI and Machine Learning.
