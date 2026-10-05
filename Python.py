@@ -1157,3 +1157,106 @@
 # data=[Dog(),Cat()]
 # for animal in data:
 #     animal.sound()
+
+#                                                           Day 13
+##########################################################################################################################################################
+##########################################################################################################################################
+
+# Composition
+
+# class Engine:
+#     def start(self):
+#         print("Engine started")
+
+# class Car:
+#     def __init__(self):
+#         self.engine=Engine()
+
+#     def start(self):
+#         self.engine.start()
+#         print("strat Car")
+
+# ressult=Car()
+# ressult.start()
+
+# Your challenge 🧠
+# Create:
+# - A Battery class
+#   - method: charge()
+# - A Phone class
+#   - the Phone should have a Battery
+#   - method: use_phone() should call the battery's charge() method and then print something showing the phone is being used.
+# Then create a Phone object and call use_phone().
+
+# class Battery:
+#     def charge(self):
+#         print("battery charing :")
+
+# class Phone:
+#     def __init__(self):
+#         self.battery=Battery()
+
+#     def use_phone(self):
+#         self.battery.charge()
+#         print("Mobail is On now")
+
+# result=Phone()
+# result.use_phone()
+
+# Magic Methods
+
+# __str__()
+
+
+# class Book:
+#     def __init__(self,author,title):
+#         self.author=author
+#         self.title=title
+#     def __str__(self):
+#         return f"{self.title} by {self.title}"
+# result=Book(title="Atomic Habits",author="James Clear")
+# print(result)
+
+# __len__()
+
+# class Team:
+#     def __init__(self,team):
+#         self.team=team
+#     def __len__(self):
+#         return len(self.team)
+
+# team = Team(["Suhail", "Ashraf", "Rahul", "Akhil"])
+
+# print(len(team))
+
+
+# __eq__()
+
+# class Book:
+#     def __init__(self,title,author):
+#         self.title=title
+#         self.author=author
+#     def __eq__(self, other):
+#         return self.title==other.title
+
+# book1 = Book("Atomic Habits", "James Clear")
+# book2 = Book("Atomic Habits", "Someone Else")
+
+# print(book1 == book2)
+        
+# __add__()       
+
+class Product:
+    def __init__(self,product,price):
+        self.product=product
+        self.price=price
+    def __add__(self, other):
+        return Product("Combined", self.price + other.price)
+
+
+product1 = Product("Laptop", 50000)
+product2 = Product("Phone", 20000)
+
+total = product1 + product2
+
+print(total.price)
