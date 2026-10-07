@@ -1246,17 +1246,121 @@
         
 # __add__()       
 
-class Product:
-    def __init__(self,product,price):
-        self.product=product
-        self.price=price
-    def __add__(self, other):
-        return Product("Combined", self.price + other.price)
+# class Product:
+#     def __init__(self,product,price):
+#         self.product=product
+#         self.price=price
+#     def __add__(self, other):
+#         return Product("Combined", self.price + other.price)
 
 
-product1 = Product("Laptop", 50000)
-product2 = Product("Phone", 20000)
+# product1 = Product("Laptop", 50000)
+# product2 = Product("Phone", 20000)
 
-total = product1 + product2
+# total = product1 + product2
 
-print(total.price)
+# print(total.price)
+
+                                                    # Day 14
+##########################################################################################################################################################
+##########################################################################################################################################
+
+# __repr__()
+
+
+# class product:
+#     def __init__(self,name,price):
+#         self.name=name
+#         self.price=price
+#     def __repr__(self):
+#         return f"Product(name={self.name}, price={self.price})"
+# result=product("Laptop",5000)
+# print(result)
+
+# dataclasses
+
+
+
+# from dataclasses import dataclass
+
+# @dataclass
+# class product:
+#     name:str
+#     price:int
+
+# result=product("laptop",2000)
+# print(result)
+
+# decrators
+
+# def greet():
+#     print("Hello suhail")
+
+# def execute(funtion):
+#     funtion()
+
+# execute(greet)
+
+# def decrator(function):
+#     def wrapper():
+#         print("Before")
+#         function()
+#         print("After")
+#     return wrapper
+# @decrator
+# def greet():
+#     print("Suhail")
+# result=decrator(greet)
+
+# result()
+
+# def decrator(funtion):
+#     def wrapper():
+#         print("funtion started")
+#         funtion()
+#         print("function ended")
+
+#     return wrapper
+# @decrator
+# def greet():
+#     print("Hello")
+# @decrator
+# def bye():
+#     print("Bye")
+
+# greet()
+# bye()
+
+# *args
+
+# def decrator(function):
+#     def wrapper(*args):
+#         print("function started")
+#         result=function(*args)
+#         print("function ended")
+#         return result
+#     return wrapper
+
+# @decrator
+# def multiply(a,b):
+#     return a*b
+
+# print(multiply(2,2))
+
+# **args
+
+
+def decorator(funtion):
+    def wrapper(*args,**kwargs):
+        output=funtion(*args,**kwargs)
+        return output
+    return wrapper
+
+    
+
+@decorator
+def introduce(name, age):
+    print(f"My name is {name} and I am {age} years old.")
+
+# introduce("Suhail", 21)
+introduce(name="Suhail", age=21)
