@@ -1350,17 +1350,47 @@
 # **args
 
 
-def decorator(funtion):
-    def wrapper(*args,**kwargs):
-        output=funtion(*args,**kwargs)
-        return output
-    return wrapper
+# def decorator(funtion):
+#     def wrapper(*args,**kwargs):
+#         output=funtion(*args,**kwargs)
+#         return output
+#     return wrapper
 
     
 
-@decorator
-def introduce(name, age):
-    print(f"My name is {name} and I am {age} years old.")
+# @decorator
+# def introduce(name, age):
+#     print(f"My name is {name} and I am {age} years old.")
 
-# introduce("Suhail", 21)
-introduce(name="Suhail", age=21)
+# # introduce("Suhail", 21)
+# introduce(name="Suhail", age=21)
+
+                                                    # Day 15
+##########################################################################################################################################################
+##########################################################################################################################################
+
+# parameterized decorators
+
+# def decrator(message):
+#     print(message)
+
+# decrator("hemmo")
+
+# adding scond leyar
+
+
+# def decrator(message):
+#     def wrapper(funtion):
+#         print("started")
+#         print(f"{message}this is the message")
+#         result=funtion()
+#         print("End")
+#         return result
+#     return wrapper
+
+# @decrator("watsaap")
+# def greet():
+#     print("hello")
+
+# finl_out=greet
+# finl_out()
